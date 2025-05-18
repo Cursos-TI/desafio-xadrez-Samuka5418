@@ -1,114 +1,24 @@
 {
-    // Use o IntelliSense para saber mais sobre os atributos possíveis.
-    // Focalizar para exibir as descrições dos atributos existentes.
-    // Para obter mais informações, acesse: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        
-        {
-            "name": "(gdb) Inicialização do Pipe",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "insira o nome do programa, por exemplo ${workspaceFolder}/a.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "pipeTransport": {
-                "debuggerPath": "/usr/bin/gdb",
-                "pipeProgram": "/usr/bin/ssh",
-                "pipeArgs": [],
-                "pipeCwd": ""
-            },
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Habilitar a reformatação automática para gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Definir Tipo de Desmontagem como Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ]
-        }
-
-        {
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Executar programa C",
+      "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${fileDirname}/${fileBasenameNoExtension}.exe",
       "args": [],
       "stopAtEntry": false,
-      "cwd": "${fileDirname}",
-      "environment": [],
-      "externalConsole": true,
+      "externalConsole": false,
+      "cwd": "/workspaces/desafio-xadrez-Samuka5418",
+      "program": "/workspaces/desafio-xadrez-Samuka5418/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
         {
-          "description": "Habilitar impressão de variáveis",
+          "description": "Enable pretty-printing for gdb",
           "text": "-enable-pretty-printing",
           "ignoreFailures": true
         }
-      ],
-      "preLaunchTask": "build"
+      ]
     }
   ]
-}
-
-        {
-            "name": "(gdb) Anexação de Pipe",
-            "type": "cppdbg",
-            "request": "attach",
-            "program": "insira o nome do programa, por exemplo ${workspaceFolder}/a.out",
-            "processId": "${command:pickRemoteProcess}",
-            "pipeTransport": {
-                "debuggerPath": "/usr/bin/gdb",
-                "pipeProgram": "/usr/bin/ssh",
-                "pipeArgs": [],
-                "pipeCwd": ""
-            },
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Habilitar a reformatação automática para gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Definir Tipo de Desmontagem como Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ]
-        },
-        {
-            "name": "(gdb) Anexar",
-            "type": "cppdbg",
-            "request": "attach",
-            "program": "insira o nome do programa, por exemplo ${workspaceFolder}/a.out",
-            "MIMode": "gdb",
-            "setupCommands": [
-                {
-                    "description": "Habilitar a reformatação automática para gdb",
-                    "text": "-enable-pretty-printing",
-                    "ignoreFailures": true
-                },
-                {
-                    "description": "Definir Tipo de Desmontagem como Intel",
-                    "text": "-gdb-set disassembly-flavor intel",
-                    "ignoreFailures": true
-                }
-            ]
-        }
-
-
-    ]
 }
